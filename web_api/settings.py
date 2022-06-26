@@ -136,3 +136,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissions',
     ]
 }
+
+SECURE_SSL_REDIRECT = True
