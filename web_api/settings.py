@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-c@7-fvgl6f-ys!4fu08_l!z^zl*jtx8e6rzg_gyz%+xcxaolc!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['api.yabisokelasi.genyd-tele.com']
 
 
 # Application definition
