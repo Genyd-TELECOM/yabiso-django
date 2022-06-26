@@ -62,7 +62,9 @@ class Parent(Person):
 
 class Student(Person):
     school = models.ForeignKey(School, on_delete=models.CASCADE)
-    parent = models.ForeignKey(Parent, on_delete=models.CASCADE)
+    parent = models.ForeignKey(Parent, on_delete=models.CASCADE, null=True)
+    parent_email = models.CharField(max_length=25, null=True)
+    parent_phone = models.CharField(max_length=15, null=True)
     birth_date = models.DateField()
 
 class Registration(models.Model):
