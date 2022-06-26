@@ -19,6 +19,8 @@ from django.urls import include, path
 from rest_framework import routers
 from main_api import views
 from rest_framework.authtoken import views as auth_token_views
+from django.conf import settings
+from django.conf.urls.static import static
 
 router = routers.DefaultRouter()
 router.register(r'parents', views.ParentViewSet, basename="parents")
@@ -31,7 +33,7 @@ router.register(r'presences', views.PresenceViewSet, basename="presences")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += [
     path("", include(router.urls)),
